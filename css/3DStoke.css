@@ -2,13 +2,23 @@
 
 #threeDstoke
 {
-  perspective: 250px;
-  transform-style: preserve-3d;
+  
   margin: 20px auto;
   padding-top: 20px;
   text-align: center;
   font-size: 0px;
   transform: rotateX(180deg);
+  perspective: 250px;
+  transform-style: preserve-3d;
+    -webkit-transform: rotateX(180deg);
+  -webkit-perspective: 250px;
+  -webkit-transform-style: preserve-3d;
+    -ms-transform: rotateX(180deg);
+  -ms-perspective: 250px;
+  -ms-transform-style: preserve-3d;
+    -moz-transform: rotateX(180deg);
+  -moz-perspective: 250px;
+  -moz-transform-style: preserve-3d;
 }
 .threeDstoke > div
 {
@@ -18,13 +28,21 @@
 	transition-property: transform,height;
     transition-duration: 0.5s;
     transition-timing-function: linear;
+    -webkit-transition-property: transform,height;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: linear;
+    -ms-transition-property: transform,height;
+    -ms-transition-duration: 0.5s;
+    -ms-transition-timing-function: linear;
+    -moz-transition-property: transform,height;
+    -moz-transition-duration: 0.5s;
+    -moz-transition-timing-function: linear;
 }
 
 .threeDstoke
 {
 	cursor: pointer;
-	  transform-style: preserve-3d;
-  perspective: 5000px;
+
   /*position: absolute;*/
    width: 10px;
   height: 200px;
@@ -32,10 +50,27 @@
     display: inline-block;
     transition-property: transform;
     transition-duration: 0.5s;
+    transform-style: preserve-3d;
+    perspective: 5000px;
+        -webkit-transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 5000px;
+        -ms-transition-property: transform;
+    -ms-transition-duration: 0.5s;
+    -ms-transform-style: preserve-3d;
+    -ms-perspective: 5000px;
+        -moz-transition-property: transform;
+    -moz-transition-duration: 0.5s;
+    -moz-transform-style: preserve-3d;
+    -moz-perspective: 5000px;
 }
 .threeDstoke:hover
 {
 	 transform: translateZ(20px) rotateY(90deg);
+	 -webkit-transform: translateZ(20px) rotateY(90deg);
+	 -ms-transform: translateZ(20px) rotateY(90deg);
+	 -moz-transform: translateZ(20px) rotateY(90deg);
 }
 
 
@@ -58,26 +93,44 @@
 {
 	
 	  transform: translateY(-5px) rotateX(90deg) ;
+	  -webkit-transform: translateY(-5px) rotateX(90deg) ;
+	  -ms-transform: translateY(-5px) rotateX(90deg) ;
+	  -moz-transform: translateY(-5px) rotateX(90deg) ;
 }
 .threeDstoke > .side1
 {
 	transform: translateZ(5px);
+	-webkit-transform: translateZ(5px);
+	-ms-transform: translateZ(5px);
+	-moz-transform: translateZ(5px);
 }
 .threeDstoke > .side2
 {
 	
 	transform:translateX(-5px) rotateY(90deg);
+	-webkit-transform:translateX(-5px) rotateY(90deg);
+	-ms-transform:translateX(-5px) rotateY(90deg);
+	-moz-transform:translateX(-5px) rotateY(90deg);
 }
 .threeDstoke > .side3
 {
 	transform: translateZ(-5px);
+	-webkit-transform: translateZ(-5px);
+	-ms-transform: translateZ(-5px);
+	-moz-transform: translateZ(-5px);
 }
 .threeDstoke > .side4
 {
 	transform:translateX(5px) rotateY(90deg);
+	-webkit-transform:translateX(5px) rotateY(90deg);
+	-ms-transform:translateX(5px) rotateY(90deg);
+	-moz-transform:translateX(5px) rotateY(90deg);
 }
 .threeDstoke > .bottom
 {
 	 transform:translateY(5px) rotateX(90deg);
+	 -webkit-transform:translateY(5px) rotateX(90deg);
+	 -ms-transform:translateY(5px) rotateX(90deg);
+	 -moz-transform:translateY(5px) rotateX(90deg);
 }
   

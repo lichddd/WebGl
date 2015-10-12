@@ -23,6 +23,15 @@ body
   transform: rotateX(65deg) rotateY(-10deg) rotateZ(25deg);
   perspective: 1000px;
   transform-style: preserve-3d;
+    -webkit-transform: rotateX(65deg) rotateY(-10deg) rotateZ(25deg);
+  -webkit-perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+    -ms-transform: rotateX(65deg) rotateY(-10deg) rotateZ(25deg);
+  -ms-perspective: 1000px;
+  -ms-transform-style: preserve-3d;
+    -moz-transform: rotateX(65deg) rotateY(-10deg) rotateZ(25deg);
+  -moz-perspective: 1000px;
+  -moz-transform-style: preserve-3d;
   margin: 80px auto;
   width: 1100px;
   padding-left: 35px;
@@ -59,6 +68,9 @@ body
 {
   /*perspective: 1000px;*/
   transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+      -ms-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
   margin: 0px 0px 0px 0px;
   padding-top: 20px;
   text-align: center;
@@ -84,16 +96,34 @@ body
 .stoke
 {
 	cursor: pointer;
-	  transform-style: preserve-3d;
-  perspective: 5000px;
+
   /*position: absolute;*/
    width: 50px;
   height: 200px;
   /*float: left;*/
     display: inline-block;
+   	
+   	
+   	transform-style: preserve-3d;
+  	perspective: 5000px;
     transition-property: transform;
     transition-duration: 0.1s;
-      transform-origin: top;
+    transform-origin: top;
+       	-webkit-transform-style: preserve-3d;
+  	-webkit-perspective: 5000px;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0.1s;
+    -webkit-transform-origin: top;
+       	-ms-transform-style: preserve-3d;
+  	-ms-perspective: 5000px;
+    -ms-transition-property: transform;
+    -ms-transition-duration: 0.1s;
+    -ms-transform-origin: top;
+       	-moz-transform-style: preserve-3d;
+  	-moz-perspective: 5000px;
+    -moz-transition-property: transform;
+    -moz-transition-duration: 0.1s;
+    -moz-transform-origin: top;
 }
 .stokex
 {
@@ -101,37 +131,76 @@ body
 	  left: -10px;
 	position: relative;
 	cursor: pointer;
-	  transform-style: preserve-3d;
-  perspective: 5000px;
+
   /*position: absolute;*/
    /*width: 20px;*/
   height: 100px;
   /*float: left;*/
     display: inline-block;
+    
+    
+    
+    	  transform-style: preserve-3d;
+  perspective: 5000px;
     transition-property: transform;
     transition-duration: 0.1s;
       transform-origin: top;
+      
+          	  -webkit-transform-style: preserve-3d;
+  -webkit-perspective: 5000px;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0.1s;
+      -webkit-transform-origin: top;
+      
+          	  -ms-transform-style: preserve-3d;
+  -ms-perspective: 5000px;
+    -ms-transition-property: transform;
+    -ms-transition-duration: 0.1s;
+      -ms-transform-origin: top;
+      
+          	  -moz-transform-style: preserve-3d;
+  -moz-perspective: 5000px;
+    -moz-transition-property: transform;
+    -moz-transition-duration: 0.1s;
+      -moz-transform-origin: top;
 }
 .stokex
 {
 	transform: translateZ(25px);
+	-webkit-transform: translateZ(25px);
+	transform: translateZ(25px);
+	transform: translateZ(25px);
+	
 }
 .stoke:active
 {
 	   transform: rotateX(-10deg) rotateY(0deg);
+	   -webkit-transform: rotateX(-10deg) rotateY(0deg);
+	   transform: rotateX(-10deg) rotateY(0deg);
+	   transform: rotateX(-10deg) rotateY(0deg);
+	   
 
 }
 .stokeactive
 {
 	   transform: rotateX(-10deg) rotateY(0deg);
+	    -webkit-transform: rotateX(-10deg) rotateY(0deg);
+	     transform: rotateX(-10deg) rotateY(0deg);
+	      transform: rotateX(-10deg) rotateY(0deg);
 
 }
 .stokex:active
 {
 	transform:translateZ(22px) rotateX(-3deg);
+	-webkit-transform:translateZ(22px) rotateX(-3deg);
+	transform:translateZ(22px) rotateX(-3deg);
+	transform:translateZ(22px) rotateX(-3deg);
 }
 .stokexactive
 {
+	transform:translateZ(22px) rotateX(-3deg);
+	-webkit-transform:translateZ(22px) rotateX(-3deg);
+	transform:translateZ(22px) rotateX(-3deg);
 	transform:translateZ(22px) rotateX(-3deg);
 }
 
@@ -169,27 +238,45 @@ body
 {
 	
 	  transform: translateY(-25px) rotateX(90deg) ;
+	  -webkit-transform: translateY(-25px) rotateX(90deg) ;
+	  -ms-transform: translateY(-25px) rotateX(90deg) ;
+	  -moz-transform: translateY(-25px) rotateX(90deg) ;
 }
 .side1
 {
 	transform: translateZ(25px);
+	-webkit-transform: translateZ(25px);
+	-ms-transform: translateZ(25px);
+	-moz-transform: translateZ(25px);
 }
 .side2
 {
 	
 	transform:translateX(-25px) rotateY(90deg);
+	-webkit-transform:translateX(-25px) rotateY(90deg);
+	-ms-transform:translateX(-25px) rotateY(90deg);
+	-moz-transform:translateX(-25px) rotateY(90deg);
 }
 .side3
 {
 	transform: translateZ(-25px);
+	-webkit-transform: translateZ(-25px);
+	-ms-transform: translateZ(-25px);
+	-moz-transform: translateZ(-25px);
 }
 .side4
 {
 	transform:translateX(25px) rotateY(90deg);
+	-webkit-transform:translateX(25px) rotateY(90deg);
+	-ms-transform:translateX(25px) rotateY(90deg);
+	-moz-transform:translateX(25px) rotateY(90deg);
 }
 .bottom
 {
 	 transform:translateY(175px) rotateX(90deg);
+	 -webkit-transform:translateY(175px) rotateX(90deg);
+	 -ms-transform:translateY(175px) rotateX(90deg);
+	 -moz-transform:translateY(175px) rotateX(90deg);
 }
 
 
@@ -197,27 +284,45 @@ body
 {
 	
 	  transform: translateY(-10px) rotateX(90deg) ;
+	  -webkit-transform: translateY(-10px) rotateX(90deg) ;
+	  -ms-transform: translateY(-10px) rotateX(90deg) ;
+	  -moz-transform: translateY(-10px) rotateX(90deg) ;
 }
 .stokex .side1
 {
 	transform: translateZ(10px);
+	-webkit-transform: translateZ(10px);
+	-ms-transform: translateZ(10px);
+	-moz-transform: translateZ(10px);
 }
 .stokex .side2
 {
 	
 	transform:translateX(-10px) rotateY(90deg);
+	-webkit-transform:translateX(-10px) rotateY(90deg);
+	-ms-transform:translateX(-10px) rotateY(90deg);
+	-moz-transform:translateX(-10px) rotateY(90deg);
 }
 .stokex .side3
 {
 	transform: translateZ(-10px);
+	-webkit-transform: translateZ(-10px);
+	-ms-transform: translateZ(-10px);
+	-moz-transform: translateZ(-10px);
 }
 .stokex .side4
 {
 	transform:translateX(10px) rotateY(90deg);
+	-webkit-transform:translateX(10px) rotateY(90deg);
+	-ms-transform:translateX(10px) rotateY(90deg);
+	-moz-transform:translateX(10px) rotateY(90deg);
 }
 .stokex .bottom
 {
 	 transform:translateY(90px) rotateX(90deg);
+	 -webkit-transform:translateY(90px) rotateX(90deg);
+	 -ms-transform:translateY(90px) rotateX(90deg);
+	 -moz-transform:translateY(90px) rotateX(90deg);
 }
   
   
