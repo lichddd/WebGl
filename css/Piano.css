@@ -20,11 +20,12 @@ body
 }
 .positionfix
 {
-    transform: rotateX(65deg) rotateY(-10deg) rotateZ(25deg);
+  transform: rotateX(65deg) rotateY(-10deg) rotateZ(25deg);
   perspective: 1000px;
   transform-style: preserve-3d;
-  margin: 200px auto;
+  margin: 80px auto;
   width: 1100px;
+  padding-left: 35px;
 }
 
 .stoke > div >.key

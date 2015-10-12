@@ -8,7 +8,7 @@
 
 
 var fixcontiner="#continer4";
-var fixp="";
+var fixp="4";
 $().ready(function () {
 	
 	
@@ -26,18 +26,18 @@ createjs.Sound.registerSound("sound/a3.ogg", 'a3');
 createjs.Sound.registerSound("sound/a3m.ogg", 'am3');
 createjs.Sound.registerSound("sound/b3.ogg", 'b3');
 
-createjs.Sound.registerSound("sound/c4.ogg", 'c');
-createjs.Sound.registerSound("sound/c4m.ogg", 'cm');
-createjs.Sound.registerSound("sound/d4.ogg", 'd');
-createjs.Sound.registerSound("sound/d4m.ogg", 'dm');
-createjs.Sound.registerSound("sound/e4.ogg", 'e');
-createjs.Sound.registerSound("sound/f4.ogg", 'f');
-createjs.Sound.registerSound("sound/f4m.ogg", 'fm');
-createjs.Sound.registerSound("sound/g4.ogg", 'g');
-createjs.Sound.registerSound("sound/g4m.ogg", 'gm');
-createjs.Sound.registerSound("sound/a4.ogg", 'a');
-createjs.Sound.registerSound("sound/a4m.ogg", 'am');
-createjs.Sound.registerSound("sound/b4.ogg", 'b');
+createjs.Sound.registerSound("sound/c4.ogg", 'c4');
+createjs.Sound.registerSound("sound/c4m.ogg", 'cm4');
+createjs.Sound.registerSound("sound/d4.ogg", 'd4');
+createjs.Sound.registerSound("sound/d4m.ogg", 'dm4');
+createjs.Sound.registerSound("sound/e4.ogg", 'e4');
+createjs.Sound.registerSound("sound/f4.ogg", 'f4');
+createjs.Sound.registerSound("sound/f4m.ogg", 'fm4');
+createjs.Sound.registerSound("sound/g4.ogg", 'g4');
+createjs.Sound.registerSound("sound/g4m.ogg", 'gm4');
+createjs.Sound.registerSound("sound/a4.ogg", 'a4');
+createjs.Sound.registerSound("sound/a4m.ogg", 'am4');
+createjs.Sound.registerSound("sound/b4.ogg", 'b4');
 
 createjs.Sound.registerSound("sound/c5.ogg", 'c5');
 createjs.Sound.registerSound("sound/c5m.ogg", 'cm5');
@@ -55,7 +55,7 @@ createjs.Sound.registerSound("sound/b5.ogg", 'b5');
 $(document).keyup(function (event) {
 	if (48<event.keyCode&&event.keyCode<56) {
 		fixcontiner="#continer4";
-		fixp="";
+		fixp="4";
 	}
 });
 $(document).keydown(function (event) {
@@ -211,9 +211,44 @@ $(ele).find('.stokex').each(function (index,ele) {
 
 function playsound (code) {
 	createjs.Sound.play(code,{duration:500});
+	
+	
+	
+	
+	setstokelen(arrindex(code));
 }
 
+function arrindex (code) {
+	
+	for (var i = 0; i < nelist.length; i++) {
+		
+		
+		if (nelist[i]==code) {
+			return i;
+		}
+		
+	}
+	return -1;
+}
+function setstokelen (index) {
+	
+	var trueindex=Math.floor((index/nelist.length)*$('.threeDstoke').length);
+	
+	$($('.threeDstoke')[trueindex-4]).stokeNobi(20);
+	$($('.threeDstoke')[trueindex-3]).stokeNobi(40);
+	$($('.threeDstoke')[trueindex-2]).stokeNobi(60);
+	$($('.threeDstoke')[trueindex-1]).stokeNobi(80);
+		$($('.threeDstoke')[trueindex]).stokeNobi(100);
+	$($('.threeDstoke')[trueindex+1]).stokeNobi(80);
+	$($('.threeDstoke')[trueindex+2]).stokeNobi(60);
+	$($('.threeDstoke')[trueindex+3]).stokeNobi(40);
+	$($('.threeDstoke')[trueindex+4]).stokeNobi(20);
 
+	
+}
 
-
+var nelist=["c3","cm3","d3","dm3","e3","f3","fm3","g3","gm3","a3","am3","b3",
+"c4","cm4","d4","dm4","e4","f4","fm4","g4","gm4","a4","am4","b4",
+"c5","cm5","d5","dm5","e5","f5","fm5","g5","gm5","a5","am5","b5"
+];
 
