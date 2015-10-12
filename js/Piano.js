@@ -209,8 +209,15 @@ $(ele).find('.stokex').each(function (index,ele) {
 
 
 
-function playsound (code) {
-	createjs.Sound.play(code,{duration:500});
+function playsound (code,time) {
+	if (!time) {
+		time=400;
+	}
+	else
+	{
+//		time=time;
+	}
+	createjs.Sound.play(code,{duration:time});
 	
 	
 	
@@ -252,3 +259,46 @@ var nelist=["c3","cm3","d3","dm3","e3","f3","fm3","g3","gm3","a3","am3","b3",
 "c5","cm5","d5","dm5","e5","f5","fm5","g5","gm5","a5","am5","b5"
 ];
 
+
+
+function autoplay () {
+	var pp=$('#pinput').val();
+	var pplist=pp.replace('\n','').split(' ');
+	console.log(pplist)
+	playpplist(pplist);
+	
+	
+}
+
+function changetoObj (str) {
+	str=str.replace('\n','').replace(' ','');
+	var obj={};
+	obj.ne=str.split('*')[0];
+	obj.time=str.split('*')[1]*100;
+	
+	
+	return obj;
+}
+
+function playpplist (pplist) {
+	var p=pplist.shift();
+	var pO=changetoObj(p);
+	try{
+		playsound(pO.ne,pO.time);
+	}catch(e){
+		//TODO handle the exception
+	}
+	
+	setTimeout(function () {
+		
+		
+		
+		
+		
+		if (pplist.length>0) {
+			playpplist(pplist);
+		}
+		
+		
+	},pO.time)
+}
