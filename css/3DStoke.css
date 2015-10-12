@@ -2,7 +2,7 @@
 
 #threeDstoke
 {
-perspective: 250px;
+  perspective: 250px;
   transform-style: preserve-3d;
   margin: 20px auto;
   padding-top: 20px;
