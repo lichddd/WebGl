@@ -16,6 +16,24 @@ body
 	width: 100%;
 	height: 100%;
 	position: absolute;
+  overflow: hidden;
+}
+.autoplaydiv
+{
+  top: -100px;
+  position: relative;
+  margin: 0px auto;
+  width: 90%;
+  height: 20px;
+  color: #dddddd;
+}
+.autoplaydiv > textarea
+{
+  resize: none;
+  float: left;
+  min-height: 100px;
+  max-height: 200px;
+  width: 80%;
 
 }
 .positionfix
@@ -39,15 +57,16 @@ body
 
 .stoke > div >.key
 {
-		position: absolute;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  position: absolute;
   top: 0px;
-  font-size: 36px;
-  /*width: 100%;*/
+  font-size: 24px;
   margin-top: 0px;
-  margin-left: 8px;
+  margin-left: 12px;
 }
 .stokex > div >.key
 {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 		position: absolute;
   top: 0px;
   font-size: 36px;
@@ -66,6 +85,7 @@ body
 }
 .continer
 {
+	font-family: initial;
   /*perspective: 1000px;*/
   transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -76,7 +96,7 @@ body
   text-align: center;
   letter-spacing: -7px;
 
-  width: 365px;
+  /*width: 365px;*/
   float: left;
 }
 .stoke > div

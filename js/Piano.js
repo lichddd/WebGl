@@ -283,6 +283,40 @@ function changetoObj (str) {
 function playpplist (pplist) {
 	var p=pplist.shift();
 	var pO=changetoObj(p);
+	
+	try{
+		var fixcontinerx='#continer4';
+		var nee=pO.ne.charAt(0);
+		var fixhh='';
+		
+		if(pO.ne.length==2)
+		{
+//			nee=pO.ne.charAt(0);
+			fixcontinerx='#continer'+pO.ne.charAt(1);
+		}
+		else
+		{
+//			nee=pO.ne.charAt(0);
+			fixcontinerx='#continer'+pO.ne.charAt(2);
+			fixhh='m';
+		}
+		
+		
+		
+		
+			
+			$(fixcontinerx+' '+'#'+nee+fixhh).addClass('stokeactive');
+				setTimeout(function () {
+					$(fixcontinerx+' '+'#'+nee+fixhh).removeClass('stokeactive');
+				},100)
+		
+		
+	}catch(e){
+		//TODO handle the exception
+	}
+
+	
+	
 	try{
 		playsound(pO.ne,pO.time);
 	}catch(e){
@@ -301,4 +335,12 @@ function playpplist (pplist) {
 		
 		
 	},pO.time)
+}
+
+
+
+
+function selectplist (e) {
+	$('#dropdownMenu1').html($(e.currentTarget).html()+'<span class="caret"></span>');
+	$('#pinput').val($(e.currentTarget).attr('data-pplist'));
 }
